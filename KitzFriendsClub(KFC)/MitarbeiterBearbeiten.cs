@@ -41,5 +41,10 @@ namespace KitzFriendsClub_KFC_
                 pb_kind.Image = Image.FromFile(file);
             }
         }
+
+        private void lbl_username_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
