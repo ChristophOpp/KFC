@@ -102,7 +102,7 @@
             this.btn_bearbeiten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bearbeiten.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold);
             this.btn_bearbeiten.ForeColor = System.Drawing.Color.Gold;
-            this.btn_bearbeiten.Location = new System.Drawing.Point(12, 154);
+            this.btn_bearbeiten.Location = new System.Drawing.Point(12, 130);
             this.btn_bearbeiten.Name = "btn_bearbeiten";
             this.btn_bearbeiten.Size = new System.Drawing.Size(167, 31);
             this.btn_bearbeiten.TabIndex = 7;
