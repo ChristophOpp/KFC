@@ -20,7 +20,7 @@ namespace KitzFriendsClub_KFC_
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-            //SqlConnection KFC = new SqlConnection();
+            //    SqlConnection KFC = new SqlConnection();
 
         }
 
