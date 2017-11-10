@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KFC.Properties
+namespace KitzFriendsClub_KFC_.Properties
 {
 
 

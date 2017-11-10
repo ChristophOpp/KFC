@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KFC
+namespace KitzFriendsClub_KFC_
 {
-    public partial class Form1 : Form
+    public partial class KinderEntfernen : Form
     {
-        public Form1()
+        public KinderEntfernen()
         {
             InitializeComponent();
         }
