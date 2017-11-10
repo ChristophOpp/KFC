@@ -76,7 +76,7 @@
             this.btn_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_foto.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold);
             this.btn_foto.ForeColor = System.Drawing.Color.Gold;
-            this.btn_foto.Location = new System.Drawing.Point(543, 481);
+            this.btn_foto.Location = new System.Drawing.Point(531, 481);
             this.btn_foto.Name = "btn_foto";
             this.btn_foto.Size = new System.Drawing.Size(83, 31);
             this.btn_foto.TabIndex = 96;
