@@ -7,21 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace KitzFriendsClub_KFC_
 {
     public partial class LogIn : Form
     {
+        private MySqlConnection con = new MySqlConnection("server = eduweb.kb.local; database = team10; username = team10; password = T3amO10");
+
         public LogIn()
         {
             InitializeComponent();
+            txt_password.PasswordChar = '*';
         }
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-            //    SqlConnection          KFC = new SqlConnection();
-
+            
+            //con.Open();
+            //MessageBox.Show("Erfolgreich verbunden");
+            
+            
         }
 
         private void rbGF_CheckedChanged(object sender, EventArgs e)
@@ -33,9 +39,27 @@ namespace KitzFriendsClub_KFC_
         {
             if (rbMitarbeiter.Checked == true)
             {
-                VerwaltungMitarbeiter VerwaltungMitarbeiter = new VerwaltungMitarbeiter();
-                VerwaltungMitarbeiter.Show();
-                Hide();
+                MySqlConnection con = new MySqlConnection("server = eduweb.kb.local; database = team10; username = team10; password = T3amO10");
+                MySqlCommand com = new MySqlCommand("SELECT COUNT(*) as cnt from Mitarbeiter where username = @usr and password = @pwd", con);
+                com.Parameters.Clear();
+                com.Parameters.AddWithValue("@usr", txt_username.Text);
+                com.Parameters.AddWithValue("@pwd", txt_password.Text);
+                con.Open();
+
+                //MessageBox.Show(com.ExecuteScalar().ToString());
+                if (com.ExecuteScalar().ToString()=="1")
+                {
+                    MessageBox.Show("Passt!");
+                    VerwaltungMitarbeiter VerwaltungMitarbeiter = new VerwaltungMitarbeiter();
+                    VerwaltungMitarbeiter.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Nein");
+                }
+
+
             }
             else if (rbCEO.Checked = true)
             {
