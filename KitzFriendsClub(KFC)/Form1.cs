@@ -49,7 +49,7 @@ namespace KitzFriendsClub_KFC_
                 //MessageBox.Show(com.ExecuteScalar().ToString());
                 if (com.ExecuteScalar().ToString()=="1")
                 {
-                    MessageBox.Show("Passt!");
+                    //MessageBox.Show("Passt!");
                     VerwaltungMitarbeiter VerwaltungMitarbeiter = new VerwaltungMitarbeiter();
                     VerwaltungMitarbeiter.Show();
                     Hide();
@@ -58,14 +58,28 @@ namespace KitzFriendsClub_KFC_
                 {
                     MessageBox.Show("Nein");
                 }
-
-
             }
             else if (rbCEO.Checked = true)
             {
-                VerwaltungCEO Verwaltung_CEO = new VerwaltungCEO();
-                Verwaltung_CEO.Show();
-                Hide();
+                MySqlConnection con = new MySqlConnection("server = eduweb.kb.local; database = team10; username = team10; password = T3amO10");
+                MySqlCommand com = new MySqlCommand("SELECT COUNT(*) as cnt from CEO where username = @usr and password = @pwd", con);
+                com.Parameters.Clear();
+                com.Parameters.AddWithValue("@usr", txt_username.Text);
+                com.Parameters.AddWithValue("@pwd", txt_password.Text);
+                con.Open();
+
+                //MessageBox.Show(com.ExecuteScalar().ToString());
+                if (com.ExecuteScalar().ToString() == "1")
+                {
+                    //MessageBox.Show("Passt!");
+                    VerwaltungCEO VerwaltungCEO = new VerwaltungCEO();
+                    VerwaltungCEO.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Nein");
+                }
             }
         }
     }
