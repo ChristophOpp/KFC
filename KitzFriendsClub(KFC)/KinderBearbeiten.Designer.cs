@@ -67,8 +67,10 @@
             this.lbl_user = new System.Windows.Forms.Label();
             this.lbl_groupname = new System.Windows.Forms.Label();
             this.lbl_group = new System.Windows.Forms.Label();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kind)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gruppenmitglieder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_foto
@@ -445,12 +447,23 @@
             this.lbl_group.TabIndex = 58;
             this.lbl_group.Text = "Ihre Gruppe: ";
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = global::KitzFriendsClub_KFC_.Properties.Resources.KFC_logo;
+            this.pb_logo.Location = new System.Drawing.Point(400, 452);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(60, 60);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_logo.TabIndex = 97;
+            this.pb_logo.TabStop = false;
+            // 
             // KinderBearbeiten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1143, 524);
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.btn_foto);
             this.Controls.Add(this.pb_kind);
             this.Controls.Add(this.lbl_foto);
@@ -496,6 +509,7 @@
             this.Text = "KinderBearbeiten";
             ((System.ComponentModel.ISupportInitialize)(this.pb_kind)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gruppenmitglieder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,5 +556,6 @@
         private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.Label lbl_groupname;
         private System.Windows.Forms.Label lbl_group;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }

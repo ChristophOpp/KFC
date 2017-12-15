@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace KitzFriendsClub_KFC_
 {
     public partial class VerwaltungMitarbeiter : Form
     {
+        
+
         public VerwaltungMitarbeiter()
         {
             InitializeComponent();
@@ -49,6 +52,22 @@ namespace KitzFriendsClub_KFC_
             LogIn LogIn = new LogIn();
             LogIn.Show();
             Hide();
+        }
+
+        private void VerwaltungMitarbeiter_Load(object sender, EventArgs e)
+        {
+            LogIn.con.Close();
+
+            MySqlDataReader reader = null;
+            MySqlCommand user = new MySqlCommand("SELECT Name, LastName from Mitarbeiter where username ='" + LogIn.benutzername + "';", LogIn.con);
+            LogIn.con.Open();
+            int[] ar = new int[3];
+           
+
+            reader = user.ExecuteReader();
+            lbl_username.Text = reader.ToString();
+            MessageBox.Show(reader.ToString());
+            MessageBox.Show(ar.ToString());   
         }
     }
 }

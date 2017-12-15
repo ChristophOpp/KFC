@@ -37,7 +37,9 @@
             this.btn_neu = new System.Windows.Forms.Button();
             this.btn_CeoStammdaten = new System.Windows.Forms.Button();
             this.dgv_mitarbeiter = new System.Windows.Forms.DataGridView();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mitarbeiter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_logout
@@ -145,6 +147,16 @@
             this.dgv_mitarbeiter.Size = new System.Drawing.Size(276, 365);
             this.dgv_mitarbeiter.TabIndex = 25;
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = global::KitzFriendsClub_KFC_.Properties.Resources.KFC_logo;
+            this.pb_logo.Location = new System.Drawing.Point(282, 347);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(60, 60);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_logo.TabIndex = 26;
+            this.pb_logo.TabStop = false;
+            // 
             // VerwaltungCEO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +164,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(636, 419);
             this.ControlBox = false;
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.dgv_mitarbeiter);
             this.Controls.Add(this.btn_CeoStammdaten);
             this.Controls.Add(this.btn_logout);
@@ -166,6 +179,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verwaltung_CEO";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mitarbeiter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +195,6 @@
         private System.Windows.Forms.Button btn_neu;
         private System.Windows.Forms.Button btn_CeoStammdaten;
         private System.Windows.Forms.DataGridView dgv_mitarbeiter;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }

@@ -35,6 +35,8 @@
             this.lbl_username = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
             this.btn_zurueck = new System.Windows.Forms.Button();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_groupname
@@ -64,7 +66,7 @@
             this.txt_group.Location = new System.Drawing.Point(373, 47);
             this.txt_group.Multiline = true;
             this.txt_group.Name = "txt_group";
-            this.txt_group.Size = new System.Drawing.Size(269, 226);
+            this.txt_group.Size = new System.Drawing.Size(269, 249);
             this.txt_group.TabIndex = 3;
             // 
             // btn_loeschen
@@ -113,12 +115,23 @@
             this.btn_zurueck.Text = "Zurück";
             this.btn_zurueck.UseVisualStyleBackColor = true;
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = global::KitzFriendsClub_KFC_.Properties.Resources.KFC_logo;
+            this.pb_logo.Location = new System.Drawing.Point(307, 236);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(60, 60);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_logo.TabIndex = 28;
+            this.pb_logo.TabStop = false;
+            // 
             // KinderEntfernen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(654, 308);
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.btn_zurueck);
             this.Controls.Add(this.btn_loeschen);
             this.Controls.Add(this.lbl_username);
@@ -128,6 +141,7 @@
             this.Controls.Add(this.txt_group);
             this.Name = "KinderEntfernen";
             this.Text = "Kinder Entfernen";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +156,6 @@
         private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.Button btn_zurueck;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }

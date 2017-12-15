@@ -60,7 +60,9 @@
             this.btn_foto = new System.Windows.Forms.Button();
             this.pb_kind = new System.Windows.Forms.PictureBox();
             this.lbl_foto = new System.Windows.Forms.Label();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kind)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_anlegen
@@ -371,12 +373,23 @@
             this.lbl_foto.TabIndex = 119;
             this.lbl_foto.Text = "Foto:";
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = global::KitzFriendsClub_KFC_.Properties.Resources.KFC_logo;
+            this.pb_logo.Location = new System.Drawing.Point(400, 389);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(60, 60);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_logo.TabIndex = 122;
+            this.pb_logo.TabStop = false;
+            // 
             // NeuerMitarbeiter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(823, 461);
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.btn_foto);
             this.Controls.Add(this.pb_kind);
             this.Controls.Add(this.lbl_foto);
@@ -414,6 +427,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Neuer Mitarbeiter";
             ((System.ComponentModel.ISupportInitialize)(this.pb_kind)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,5 +467,6 @@
         private System.Windows.Forms.Button btn_foto;
         private System.Windows.Forms.PictureBox pb_kind;
         private System.Windows.Forms.Label lbl_foto;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }

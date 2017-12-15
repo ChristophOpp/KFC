@@ -38,7 +38,9 @@
             this.btn_neu = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.dgv_gruppenmitglieder = new System.Windows.Forms.DataGridView();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gruppenmitglieder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_group
@@ -156,6 +158,16 @@
             this.dgv_gruppenmitglieder.Size = new System.Drawing.Size(265, 356);
             this.dgv_gruppenmitglieder.TabIndex = 26;
             // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = global::KitzFriendsClub_KFC_.Properties.Resources.KFC_logo;
+            this.pb_logo.Location = new System.Drawing.Point(281, 342);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(60, 60);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_logo.TabIndex = 28;
+            this.pb_logo.TabStop = false;
+            // 
             // VerwaltungMitarbeiter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +175,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(624, 414);
             this.ControlBox = false;
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.dgv_gruppenmitglieder);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_neu);
@@ -178,7 +191,9 @@
             this.Name = "VerwaltungMitarbeiter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verwaltung Mitarbeiter";
+            this.Load += new System.EventHandler(this.VerwaltungMitarbeiter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gruppenmitglieder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +210,6 @@
         private System.Windows.Forms.Button btn_neu;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.DataGridView dgv_gruppenmitglieder;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }

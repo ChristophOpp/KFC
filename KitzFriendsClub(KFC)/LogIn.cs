@@ -13,13 +13,15 @@ namespace KitzFriendsClub_KFC_
 {
     public partial class LogIn : Form
     {
-        private MySqlConnection con = new MySqlConnection("server = eduweb.kb.local; database = team10; username = team10; password = T3amO10");
+        public static MySqlConnection con = new MySqlConnection("server = eduweb.kb.local; database = team10; username = team10; password = T3amO10");
 
         public LogIn()
         {
             InitializeComponent();
             txt_password.PasswordChar = '*';
         }
+
+        public static string benutzername;
 
         private void LogIn_Load(object sender, EventArgs e)
         {
@@ -53,6 +55,7 @@ namespace KitzFriendsClub_KFC_
                 if (com.ExecuteScalar().ToString()=="1")
                 {
                     //MessageBox.Show("Passt!");
+                    benutzername = txt_username.Text;
                     VerwaltungMitarbeiter VerwaltungMitarbeiter = new VerwaltungMitarbeiter();
                     VerwaltungMitarbeiter.Show();
                     Hide();
